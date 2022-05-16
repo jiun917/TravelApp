@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import fastClick from 'fastclick'
+
 import HomePage from '@/pages/home/Home.vue'
 
 
 Vue.use(VueRouter)
-fastClick.attach(document.body)
+
 
 
 const routes = [
