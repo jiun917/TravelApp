@@ -2,7 +2,7 @@
   <div>
     <div class="title">熱銷推薦</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item in list" :key="item.id">
         <img
           class="item-img"
           :src="item.imgUrl"
@@ -20,30 +20,10 @@
 <script>
 export default {
   name: "HomeRecommend",
-  data () {
-      return {
-          recommendList: [{
-          id:'001',
-          imgUrl:'https://img.poibank.com/BShvWdIPCIU9PokS37F_HR5tqX8=/W3siZm9ybWF0IjoianBnIn0seyJrZXkiOiJkaXNjb3Zlci90dy9wb3B1bGFyX2l0aW5lcmFyeS84ZGZmZWQ4YS1kYjRkLTRmMzQtYmJhMi1iYzc3MzA2NjkwY2EifSx7InJlc2l6ZSI6eyJ3aWR0aCI6IjI3MCJ9fV0=',
-          title:'澎湖雙心石滬',
-          desc:'好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩',
-
-      },{
-          id:'002',
-          imgUrl:'https://img.poibank.com/BShvWdIPCIU9PokS37F_HR5tqX8=/W3siZm9ybWF0IjoianBnIn0seyJrZXkiOiJkaXNjb3Zlci90dy9wb3B1bGFyX2l0aW5lcmFyeS84ZGZmZWQ4YS1kYjRkLTRmMzQtYmJhMi1iYzc3MzA2NjkwY2EifSx7InJlc2l6ZSI6eyJ3aWR0aCI6IjI3MCJ9fV0=',
-          title:'澎湖雙心石滬',
-          desc:'好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩',
-
-      },{
-          id:'003',
-          imgUrl:'https://img.poibank.com/BShvWdIPCIU9PokS37F_HR5tqX8=/W3siZm9ybWF0IjoianBnIn0seyJrZXkiOiJkaXNjb3Zlci90dy9wb3B1bGFyX2l0aW5lcmFyeS84ZGZmZWQ4YS1kYjRkLTRmMzQtYmJhMi1iYzc3MzA2NjkwY2EifSx7InJlc2l6ZSI6eyJ3aWR0aCI6IjI3MCJ9fV0=',
-          title:'澎湖雙心石滬',
-          desc:'好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩好玩好玩好好玩',
-
-      }]
-      }
-  }
-};
+  props:{
+    list: Array
+  },
+}
 </script>
 
 <style lang="stylus" scoped>

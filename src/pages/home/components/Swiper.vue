@@ -1,8 +1,8 @@
 <template>
 <div class="wrapper">
-  <swiper :options="swiperOption">
+  <swiper :options="swiperOption" v-if="showSwiper">
     <!-- slides -->
-    <swiper-slide v-for="item in swiperList" :key="item.id">
+    <swiper-slide v-for="item in list" :key="item.id">
         <img class="swiper-image" :src="item.imgUrl" >
     </swiper-slide>
     <!-- Optional controls -->
@@ -14,19 +14,20 @@
 <script>
 export default {
     name: 'HomeSwiper',
+    props: {
+        list: Array
+    },
     data () {
         return{
             swiperOption: {
                 pagination: '.swiper-pagination',
                 loop: true 
-            },
-            swiperList: [{
-                id: '0001',
-                imgUrl:'https://sites.google.com/site/gougouyaolaiyaoqu/_/rsrc/1429552621181/tu-pian/tai-wan-feng-jing-tu-pian/222913ein3c26667i6ni3t.jpg?height=200&width=640'
-            },{
-                id:'0002',
-                imgUrl:'https://sites.google.com/site/gougouyaolaiyaoqu/_/rsrc/1429167104093/01tai-bei-jing-dian/xin-yi-qu/601_0cfd841f.jpg?height=200&width=640'
-            }]
+            }
+        }
+    },
+    computed: {
+        showSwiper () {
+            return this.list.length
         }
     }
 }
