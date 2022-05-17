@@ -22,13 +22,13 @@ export default {
         {
           id: "0001",
           imgUrl:
-            "https://cdn-icons.flaticon.com/png/512/1927/premium/1927138.png?token=exp=1652689994~hmac=73289db4eae1e0de7b32691491755b63",
+            "https://cdn-icons-png.flaticon.com/512/1090/1090663.png",
           desc: "景點門票",
         },
         {
           id: "0002",
           imgUrl:
-            "https://cdn-icons.flaticon.com/png/512/805/premium/805505.png?token=exp=1652696012~hmac=21209f7ef749d0f098028094e514ba0e",
+            "https://cdn-icons-png.flaticon.com/512/3163/3163752.png",
           desc: "滑雪季節",
         },
         {
@@ -49,7 +49,7 @@ export default {
         {
           id: "0006",
           imgUrl:
-            "https://cdn-icons.flaticon.com/png/512/2988/premium/2988750.png?token=exp=1652696326~hmac=d2d5e51e0b8ff5c7088977b654cfb5b3",
+            "https://cdn-icons-png.flaticon.com/512/3069/3069318.png",
           desc: "必遊榜單",
         },
         {
@@ -59,7 +59,7 @@ export default {
         },
         {
           id: "0008",
-          imgUrl: "https://cdn-icons.flaticon.com/png/512/1423/premium/1423219.png?token=exp=1652696799~hmac=acf679f1e4b86d7d47e3381efd0b823b",
+          imgUrl: "https://cdn-icons-png.flaticon.com/512/3524/3524939.png",
           desc: "全部",
         },
         {
@@ -87,45 +87,46 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~@/assets/styles/mixins.styl'
-.icons >>> .swiper-container {
+.icons >>> .swiper-container 
   height: 0;
   padding-bottom: 50%;
-}
 
-.icon {
-  position: relative;
-  overflow: hidden;
-  float: left;
-  height: 0;
-  width: 25%;
-  padding-bottom: 25%;
+.icons 
+  margin-top: .1rem 
+  .icon 
+    position: relative;
+    overflow: hidden;
+    float: left;
+    height: 0;
+    width: 25%;
+    padding-bottom: 25%;
 
-  .icon-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0.44rem;
-    box-sizing: border-box;
-    padding: 0.1rem;
+    .icon-img 
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0.44rem;
+      box-sizing: border-box;
+      padding: 0.1rem;
 
-    .icon-img-content {
-      display: block;
-      margin: 0 auto;
-      height: 100%;
-    }
-  }
+      .icon-img-content 
+        display: block;
+        margin: 0 auto;
+        height: 100%;
+      
+    
 
-  .icon-desc {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 0.44rem;
-    line-height: 0.44rem;
-    text-align: center;
-    color: #333;
-    ellipsis()
-  }
-}
+    .icon-desc 
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 0.44rem;
+      line-height: 0.44rem;
+      text-align: center;
+      color: #333;
+      ellipsis()
+    
+  
 </style>
