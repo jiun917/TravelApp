@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomePage from '@/pages/home/Home.vue'
 import CityPage from '@/pages/city/City.vue'
+import DetailPage from '@/pages/detail/Detail'
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,12 @@ const routes = [
     path: '/city',
     name: 'City',
     component: CityPage
+  },{
+    path: '/detail/:id',
+    name: 'Detail',
+    component: DetailPage
   }
+
   
 ]
 
