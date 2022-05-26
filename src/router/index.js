@@ -21,15 +21,22 @@ const routes = [
     path: '/detail/:id',
     name: 'Detail',
     component: DetailPage
-  }
+  }]
 
-  
-]
-
+ 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior: (to, from, savedPosition) => {
+    if (to.name.startsWith('products') && from.name.startsWith('products')) {
+      return null;
+    }
+
+    return savedPosition || { x: 0, y: 0 };
+  },
 })
+
+
 
 export default router

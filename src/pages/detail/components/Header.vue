@@ -9,7 +9,6 @@
       </router-link>
       景點詳情
     </div>
-    <div class="content"></div>
   </div>
 </template>
 
@@ -51,10 +50,6 @@ export default {
 <style lang="stylus" scoped>
 @import '~@/assets/styles/varibles.styl';
 
-.content {
-  height: 50rem;
-}
-
 .header-abs {
   position: absolute;
   left: 0.2rem;
@@ -73,6 +68,7 @@ export default {
 }
 
 .header-fixed {
+  z-index: 2
   position: fixed;
   top: 0;
   left: 0;

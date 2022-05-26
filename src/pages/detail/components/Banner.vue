@@ -1,29 +1,42 @@
 <template>
     <div>
         <div class="banner" @click="handleBannerClick">
-            <img class="banner-img" src="http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg">
+            <img class="banner-img" :src="bannerImg" />
             <div class="banner-info">
                 <div class="banner-title">
-                    大連海洋世界
+                    {{this.sightName}}
                 </div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon ">&#xe640;</span>
-                    39
+                    {{this.bannerImgs.length}}
                 </div>
             </div>
         </div>
-        <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose" ></common-gallary>
+        <common-fade>
+            <common-gallary 
+            :imgs="bannerImgs" 
+            v-show="showGallary" 
+            @close="handleGallaryClose" 
+            >
+            </common-gallary>
+        </common-fade>
     </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import CommonFade from 'common/fade/Fade'
+
 export default {
     name: 'DetailBanner',
+    props: {
+        sightName: String ,
+        bannerImg: String ,
+        bannerImgs: Array
+    },
     data () {
         return {
             showGallary: false,
-            imgs:['https://img.poibank.com/m9dGF9zIG5OSySP5Qxd0qGLkBUY=/W3siZm9ybWF0Ijoid2VicCJ9LHsia2V5Ijoiam91cm5hbHMvNTEwNDYvY292ZXIvMmE5ZjI2OWMtZmM5NS00OWMyLTg2ZTUtNjg1MjE4NjNmYjFmIn0seyJyZXNpemUiOnsid2lkdGgiOiI1Nzc4In19XQ==','https://img.poibank.com/m9dGF9zIG5OSySP5Qxd0qGLkBUY=/W3siZm9ybWF0Ijoid2VicCJ9LHsia2V5Ijoiam91cm5hbHMvNTEwNDYvY292ZXIvMmE5ZjI2OWMtZmM5NS00OWMyLTg2ZTUtNjg1MjE4NjNmYjFmIn0seyJyZXNpemUiOnsid2lkdGgiOiI1Nzc4In19XQ==']
         }
     },
     methods: {
@@ -35,7 +48,8 @@ export default {
         }
     },
     components: {
-        CommonGallary
+        CommonGallary,
+        CommonFade
     }
 }
 </script>

@@ -2,11 +2,9 @@
   <div class="container" @click="handleGallaryClick">
     <div class="wrapper">
       <swiper :options="swiperOptions">
-        <!-- slides -->
         <swiper-slide v-for="(item, index) in imgs" :key="index">
-          <img class="gallary-image" src="item" />
+          <img class="gallary-image" :src="item" />
         </swiper-slide>
-        <!-- Optional controls -->
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
